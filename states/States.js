@@ -1,6 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import i18n from '../i18n';
 
 const AuthContext = createContext();
 
@@ -14,12 +13,22 @@ export const AuthProvider = ({ children }) => {
     try {
       const token = await AsyncStorage.getItem('token');
       const roleFetched  = await AsyncStorage.getItem('role');
-      console.warn("Token : "+token);
-      console.warn("Role  : "+roleFetched);
-      setRole(roleFetched);
-      setIsAuthenticated(!!token);  
+      
+      if(roleFetched){
+        setRole(roleFetched);
+      }
+      else{
+        setRole("etudiant");
+      }
+      if(token){
+        setIsAuthenticated(true);  
+      }
+      else{
+        setIsAuthenticated(false);
+      }
     } catch (error) {
       console.log('Error loading authentication:', error);
+      setRole("etudiant");
       setIsAuthenticated(false);
     }
   };
@@ -29,12 +38,11 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const initializeApp = async () => {
       setIsLoading(true);
-      await loadAuthentication();  
+      await loadAuthentication();
       setIsLoading(false);
     };
-
     initializeApp();
-  }, [isAuthenticated]);
+  }, []);
 
   return (
     <AuthContext.Provider

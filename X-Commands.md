@@ -1,5 +1,3 @@
-// command to solve any problem related to android folder
-npx expo prebuild --clean 
 
  
 

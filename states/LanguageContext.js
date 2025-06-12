@@ -15,7 +15,7 @@ export const LanguageProvider = ({ children }) => {
         const storedLanguage = await AsyncStorage.getItem('language');
         const initialLanguage = storedLanguage || 'fr';  
         setLanguage(initialLanguage);
-        i18n.changeLanguage(initialLanguage);
+        await i18n.changeLanguage(initialLanguage); 
         if (!storedLanguage) {
           await AsyncStorage.setItem('language', 'fr');
         }

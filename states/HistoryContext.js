@@ -3,26 +3,18 @@ import React, { createContext, useContext, useRef } from 'react';
 const HistoryContext = createContext();
 
 export const HistoryProvider = ({ children }) => {
-  const historyRef = useRef([{ screenName: 'Actualite', params: {} }]);
+  const historyRef = useRef([{ screenName: 'Login', params: {} }]);
 
-  const logHistory = (action) => {
-    console.log(`%c[History] Action: ${action}`, 'color: blue; font-weight: bold;');
-    console.log('Current History Stack:', historyRef.current);
-  };
+  
 
   const pushToHistory = (screenName, params = {}) => {
     historyRef.current.push({ screenName, params });
-    console.log(`%cRoute Added: ${screenName}`, 'color: green');
-    logHistory('push');
   };
 
   const popFromHistory = () => {
     if (historyRef.current.length > 1) {
-      const removed = historyRef.current.pop();
-      console.warn(`%cRoute Removed: ${removed.screenName}`, 'color: orange');
-      logHistory('pop');
+      historyRef.current.pop();
     } else {
-      console.warn('%cCannot remove the last remaining route.', 'color: red');
     }
   };
 
@@ -32,9 +24,7 @@ export const HistoryProvider = ({ children }) => {
   };
 
   const clearHistory = () => {
-    historyRef.current = [{ screenName: 'Actualite', params: {} }];
-    console.warn('%cHistory cleared.', 'color: purple');
-    logHistory('clear');
+    historyRef.current = [{ screenName: 'Login', params: {} }];
   };
 
   return (
