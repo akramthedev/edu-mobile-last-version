@@ -38,6 +38,10 @@
     "platforms": [
       "ios",
       "android"
+    ],
+    "plugins": [
+      "expo-font",
+      "expo-localization"
     ]
   }
 }
