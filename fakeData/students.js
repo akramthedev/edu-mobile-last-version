@@ -1,0 +1,34 @@
+
+const students = [
+    { id: 1, name: "Lorem Ipsum Dolores", status: "Présent", image : "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg" },
+    { id: 2, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://img.freepik.com/photos-gratuite/concept-bonheur-bien-etre-confiance-cheerful-jolie-femme-afro-americaine-coupe-cheveux-boucles-poitrine-bras-croises-dans-pose-puissante-sure-elle-souriante-determinee-porter-pull-jaune_176420-35063.jpg?semt=ais_hybrid" },
+    { id: 3, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://img.freepik.com/premium-photo/full-length-vertical-shot-thoughtful-lovely-dreamy-african-american-woman-with-curly-hair-looking-up-smiling-imaging-things-standing-pensive-thinking-what-answer-as-holding-smartphone_1258-7393.jpg" },
+    { id: 4, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" },
+    { id: 5, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://img.freepik.com/photos-gratuite/impressionne-jeune-fille-race-blanche-coupe-cheveux-lutin-tenant-tasse-droite-montrant-main-vide-isolee-fond-violet_141793-88011.jpg" },
+    { id: 6, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy6FXTgZkPJYkbqjPQHsxNE0-n9Kg2Qobc2ageYSRItQk9EzOnk8Cblv724kU74rErGA&usqp=CAU" },
+    { id: 7, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://media.gettyimages.com/id/71450302/fr/photo/portrait-of-a-young-woman-smiling.jpg?s=612x612&w=gi&k=20&c=W4nJygWhUBnEHMhPgTejKJUOxnCy903DeTGjSUUoFKg=" },
+    { id: 8, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://resize.elle.fr/square_1280/var/plain_site/storage/images/people/la-vie-des-people/news/bruce-jenner-l-ex-beau-pere-de-kim-kardashian-se-confie-sur-son-changement-de-sexe-2940580/54066020-1-fre-FR/Bruce-Jenner-l-ex-beau-pere-de-Kim-Kardashian-se-confie-sur-son-changement-de-sexe.jpg" },
+    { id: 9, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" },
+    { id: 10, name: "Lorem Ipsum Dolores", status: "Présent", image : "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg" },
+    { id: 11, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://img.freepik.com/photos-gratuite/concept-bonheur-bien-etre-confiance-cheerful-jolie-femme-afro-americaine-coupe-cheveux-boucles-poitrine-bras-croises-dans-pose-puissante-sure-elle-souriante-determinee-porter-pull-jaune_176420-35063.jpg?semt=ais_hybrid" },
+    { id: 12, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://img.freepik.com/premium-photo/full-length-vertical-shot-thoughtful-lovely-dreamy-african-american-woman-with-curly-hair-looking-up-smiling-imaging-things-standing-pensive-thinking-what-answer-as-holding-smartphone_1258-7393.jpg" },
+    { id: 13, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" },
+    { id: 14, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://img.freepik.com/photos-gratuite/impressionne-jeune-fille-race-blanche-coupe-cheveux-lutin-tenant-tasse-droite-montrant-main-vide-isolee-fond-violet_141793-88011.jpg" },
+    { id: 15, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy6FXTgZkPJYkbqjPQHsxNE0-n9Kg2Qobc2ageYSRItQk9EzOnk8Cblv724kU74rErGA&usqp=CAU" },
+    { id: 16, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://media.gettyimages.com/id/71450302/fr/photo/portrait-of-a-young-woman-smiling.jpg?s=612x612&w=gi&k=20&c=W4nJygWhUBnEHMhPgTejKJUOxnCy903DeTGjSUUoFKg=" },
+    { id: 17, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://resize.elle.fr/square_1280/var/plain_site/storage/images/people/la-vie-des-people/news/bruce-jenner-l-ex-beau-pere-de-kim-kardashian-se-confie-sur-son-changement-de-sexe-2940580/54066020-1-fre-FR/Bruce-Jenner-l-ex-beau-pere-de-Kim-Kardashian-se-confie-sur-son-changement-de-sexe.jpg" },
+    { id: 18, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" },
+    { id: 19, name: "Lorem Ipsum Dolores", status: "Présent", image : "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg" },
+    { id: 20, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://img.freepik.com/photos-gratuite/concept-bonheur-bien-etre-confiance-cheerful-jolie-femme-afro-americaine-coupe-cheveux-boucles-poitrine-bras-croises-dans-pose-puissante-sure-elle-souriante-determinee-porter-pull-jaune_176420-35063.jpg?semt=ais_hybrid" },
+    { id: 21, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://img.freepik.com/premium-photo/full-length-vertical-shot-thoughtful-lovely-dreamy-african-american-woman-with-curly-hair-looking-up-smiling-imaging-things-standing-pensive-thinking-what-answer-as-holding-smartphone_1258-7393.jpg" },
+    { id: 22, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" },
+    { id: 23, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://img.freepik.com/photos-gratuite/impressionne-jeune-fille-race-blanche-coupe-cheveux-lutin-tenant-tasse-droite-montrant-main-vide-isolee-fond-violet_141793-88011.jpg" },
+    { id: 24, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy6FXTgZkPJYkbqjPQHsxNE0-n9Kg2Qobc2ageYSRItQk9EzOnk8Cblv724kU74rErGA&usqp=CAU" },
+    { id: 25, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://media.gettyimages.com/id/71450302/fr/photo/portrait-of-a-young-woman-smiling.jpg?s=612x612&w=gi&k=20&c=W4nJygWhUBnEHMhPgTejKJUOxnCy903DeTGjSUUoFKg=" },
+    { id: 26, name: "Lorem Ipsum Dolores", status: "Présent" , image : "https://resize.elle.fr/square_1280/var/plain_site/storage/images/people/la-vie-des-people/news/bruce-jenner-l-ex-beau-pere-de-kim-kardashian-se-confie-sur-son-changement-de-sexe-2940580/54066020-1-fre-FR/Bruce-Jenner-l-ex-beau-pere-de-Kim-Kardashian-se-confie-sur-son-changement-de-sexe.jpg" },
+    { id: 27, name: "Lorem Ipsum Dolores", status: "Absent" , image : "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" },
+];
+
+
+
+export default students;
